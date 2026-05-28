@@ -42,13 +42,13 @@ header {
 .nav-list {
     list-style-type: none;
     display: flex;
+    gap: 31px;
 }
 
 .nav-list a {
     font-family: var(--fonte-destaque);
     color: #ffffff;
     text-decoration: none;
-    margin-left: 31px;
     display: inline-block;
     transition: 0.1s;
 }
