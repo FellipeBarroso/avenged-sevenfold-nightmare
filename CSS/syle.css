@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "TrashHand";
+    src: url(../fonts/TrashHand.TTF) format("truetype");
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    backdrop-filter: blur(2px);
+    height: 5vh;
+    border-bottom: 3px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 45px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-family: "TrashHand";
+    font-size: 1.4rem;
+    display: inline-block;
+}
+
+.nav-list li:nth-child(odd) a:hover {
+    transform: rotate(-6deg);
+    font-size: 1.5rem;
+}
+
+.nav-list li:nth-child(even) a:hover {
+    transform: rotate(6deg);
+    font-size: 1.5rem;
+}
+
+.banner {
+    max-width: 1515px;
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #d9c7b1;
+    height: 60vh;
+    border-bottom: 3px solid black;
+}
+
+.banner img {
+    display: none;
+}
+
+@media (min-width: 1500px) {
+    .banner {
+        max-width: 100%;
+        background-image: url(../images/header-big.png);
+        background-position: right center;
+        background-size: contain;
+        background-color: #d5c0ab;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner img {
+        display: block;
+        max-width: 70%;
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 1900px) {
+   .nav-list {
+        gap: 50px;
+    }
+
+    .nav-list a {
+        font-size: 1.4rem;
+    }
+
+    .nav-list li:nth-child(odd) a:hover {
+    transform: rotate(-6deg);
+    font-size: 1.5rem;
+    }
+
+    .nav-list li:nth-child(even) a:hover {
+    transform: rotate(6deg);
+    font-size: 1.5rem;
+    }
+
+    .banner {
+        max-width: 100%;
+        background-image: url(../images/header-big.png);
+        background-position: right center;
+        background-size: contain;
+        background-color: #d5c0ab;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner img {
+        display: block;
+        max-width: 60%;
+        margin-top: 90px;
+    }
+}
